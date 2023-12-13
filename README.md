@@ -19,6 +19,22 @@ We plan to train a binery classifier for the prediction model. By training a cla
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 6 pertinent columns. 
 
 **Our dataframe**:
+
+
+|    |   MONTH |   ANOMALY.LEVEL | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
+|---:|--------:|----------------:|:-------------------|------------------:|---------------------:|
+|  0 |       7 |            -0.3 | severe weather     |              3060 |                70000 |
+|  1 |      10 |            -1.5 | severe weather     |              3000 |                70000 |
+|  2 |       6 |            -0.1 | severe weather     |              2550 |                68200 |
+|  3 |       7 |             1.2 | severe weather     |              1740 |               250000 |
+|  4 |      11 |            -1.4 | severe weather     |              1860 |                60000 |
+|  5 |       7 |            -0.9 | severe weather     |              2970 |                63000 |
+|  6 |       6 |             0.2 | severe weather     |              3960 |               300000 |
+|  7 |       3 |             0.6 | intentional attack |               155 |                 5941 |
+|  8 |       6 |            -0.2 | severe weather     |              3621 |               400000 |
+|  9 |       6 |            -0.2 | severe weather     |              7740 |               193000 |
+
+
 |    |   MONTH |   ANOMALY.LEVEL | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
 |---:|--------:|----------------:|:-------------------|------------------:|---------------------:|
 |  0 |       7 |            -0.3 | severe weather     |              3060 |                70000 |
@@ -101,9 +117,10 @@ We try to tune the max_depth, min_samples_split, and criterion as our hyperparam
 Our F1-Score increases about 0.02 after we using the hyperparameter we find. so we will use this combination of hyperparameter to do the rest of the analysis.
 
 **Step 3.5**:Confusion matrix
-<iframe src="assets/confusion_matrix.html" width=800 height=600 frameBorder=0></iframe>
 
 In order to actually see whether our model can make a good prediction, we decide to make a confusion matrix to plot the matrix directly.
+
+<iframe src="assets/confusion_matrix.html" width=800 height=600 frameBorder=0></iframe>
 
 The confusion matrix shows that there are 52 true positives (TP), 6 false negatives (FN), 133 true negatives (TN), and 10 false positives (FP). These values provide a detailed breakdown of the model’s predictions, allowing for a deeper analysis of its performance.
 
