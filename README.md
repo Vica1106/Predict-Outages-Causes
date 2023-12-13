@@ -1,7 +1,10 @@
-# Predict-Outages-Causes
+# Predict Outages Causes
 Final project for DSC 80 at UCSD
 
 **Name(s)**: Haoyang Yu, Jessie Zhang
+
+**Our exploratory data analysis on this dataset can be found**: 
+https://vica1106.github.io/Power_Outages_Analyst/
 
 ### Introduction
 Numerous factors contribute to outages, some of which can significantly impact individuals and society as a whole. Among these, severe weather often stands as a leading cause. Our project focuses on forecasting whether a major power outage stems from severe weather conditions. If successful, this initiative aims to streamline the identification of outage triggers, consequently saving valuable time in determining causation.
@@ -21,7 +24,18 @@ We plan to train a binery classifier for the prediction model. By training a cla
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 6 pertinent columns. 
 
 **Our dataframe**:
-
+|   MONTH |   ANOMALY.LEVEL | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
+|--------:|----------------:|:-------------------|------------------:|---------------------:|
+|       7 |            -0.3 | severe weather     |              3060 |                70000 |
+|      10 |            -1.5 | severe weather     |              3000 |                70000 |
+|       6 |            -0.1 | severe weather     |              2550 |                68200 |
+|       7 |             1.2 | severe weather     |              1740 |               250000 |
+|      11 |            -1.4 | severe weather     |              1860 |                60000 |
+|       7 |            -0.9 | severe weather     |              2970 |                63000 |
+|       6 |             0.2 | severe weather     |              3960 |               300000 |
+|       3 |             0.6 | intentional attack |               155 |                 5941 |
+|       6 |            -0.2 | severe weather     |              3621 |               400000 |
+|       6 |            -0.2 | severe weather     |              7740 |               193000 | 
 
 **Our prediction question**: Predict if a major power outage is caused by the severe weather.
 
@@ -119,12 +133,12 @@ The question we are trying to answer is whether the outages happened when cold e
 
 - **Significance level**: 0.01
 
-### Conclusion
+#### Conclusion
 
 - The p-value is around 0.29, it is greater than the significance level of 0.01. 
 - We fail to reject the null hypothesis. 
 - There is not enough evidence to conclude that the precision for Outages happened when cold episodes by season is higher than its precision for Outages happened when warm episodes by season.
 
-### Summary
+#### Summary
 
 For our fairness assessment, we have categorized the test dataset into two groups: 'ANOMALY.LEVEL' less than 0, and ‘ANOMALY.LEVEL’ larger and equal than 0.  'ANOMALY.LEVEL' less than 0 indicate the power outage happened when cold episodes by season. Our primary evaluation metric is F1-score. We propose a null hypothesis asserting that our model’s accuracy for determining outage happened with cold/warm episodes by season is roughly equivalent across all cases, with any observed differences attributable to random variability. Conversely, our alternative hypothesis suggests that the model demonstrates unfairness, with a higher f1-score for Outages happened when cold episodes by season. We have selected the f1-score disparity between those two groups as our test statistic, with a significance level of 0.01. After running a permutation test 1,000 times, we obtained a p-value of 0.29, which exceeds our significance level. This outcome leads us to retain the null hypothesis, indicating that our model, based on this f1-score, is fair. However, we cannot definitively assert its complete fairness as the permutation test results are also contingent on random chance. Hence, we recommend further testing with more data to verify if it is ‘truly fair’.
