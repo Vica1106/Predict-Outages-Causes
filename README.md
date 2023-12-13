@@ -119,3 +119,12 @@ The question we are trying to answer is whether the outages happened when cold e
 
 - **Significance level**: 0.01
 
+### Conclusion
+
+- The p-value is around 0.29, it is greater than the significance level of 0.01. 
+- We fail to reject the null hypothesis. 
+- There is not enough evidence to conclude that the precision for Outages happened when cold episodes by season is higher than its precision for Outages happened when warm episodes by season.
+
+### Summary
+
+For our fairness assessment, we have categorized the test dataset into two groups: 'ANOMALY.LEVEL' less than 0, and ‘ANOMALY.LEVEL’ larger and equal than 0.  'ANOMALY.LEVEL' less than 0 indicate the power outage happened when cold episodes by season. Our primary evaluation metric is F1-score. We propose a null hypothesis asserting that our model’s accuracy for determining outage happened with cold/warm episodes by season is roughly equivalent across all cases, with any observed differences attributable to random variability. Conversely, our alternative hypothesis suggests that the model demonstrates unfairness, with a higher f1-score for Outages happened when cold episodes by season. We have selected the f1-score disparity between those two groups as our test statistic, with a significance level of 0.01. After running a permutation test 1,000 times, we obtained a p-value of 0.29, which exceeds our significance level. This outcome leads us to retain the null hypothesis, indicating that our model, based on this f1-score, is fair. However, we cannot definitively assert its complete fairness as the permutation test results are also contingent on random chance. Hence, we recommend further testing with more data to verify if it is ‘truly fair’.
