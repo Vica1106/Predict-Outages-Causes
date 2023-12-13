@@ -30,7 +30,7 @@ Our dataset encompasses records of significant power outages observed across var
 |       6 |             0.2 | severe weather     |              3960 |               300000 |
 |       3 |             0.6 | intentional attack |               155 |                 5941 |
 |       6 |            -0.2 | severe weather     |              3621 |               400000 |
-|       6 |            -0.2 | severe weather     |              7740 |               193000 | 
+|       6 |            -0.2 | severe weather     |              7740 |               193000 |
 
 **Our prediction question**: Predict if a major power outage is caused by the severe weather.
 
