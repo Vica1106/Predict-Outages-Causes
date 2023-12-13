@@ -19,18 +19,18 @@ We plan to train a binery classifier for the prediction model. By training a cla
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 6 pertinent columns. 
 
 **Our dataframe**:
-|   MONTH |   ANOMALY.LEVEL | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
-|--------:|----------------:|:-------------------|------------------:|---------------------:|
-|       7 |            -0.3 | severe weather     |              3060 |                70000 |
-|      10 |            -1.5 | severe weather     |              3000 |                70000 |
-|       6 |            -0.1 | severe weather     |              2550 |                68200 |
-|       7 |             1.2 | severe weather     |              1740 |               250000 |
-|      11 |            -1.4 | severe weather     |              1860 |                60000 |
-|       7 |            -0.9 | severe weather     |              2970 |                63000 |
-|       6 |             0.2 | severe weather     |              3960 |               300000 |
-|       3 |             0.6 | intentional attack |               155 |                 5941 |
-|       6 |            -0.2 | severe weather     |              3621 |               400000 |
-|       6 |            -0.2 | severe weather     |              7740 |               193000 |
+|    |   MONTH |   ANOMALY.LEVEL | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |
+|---:|--------:|----------------:|:-------------------|------------------:|---------------------:|
+|  0 |       7 |            -0.3 | severe weather     |              3060 |                70000 |
+|  1 |      10 |            -1.5 | severe weather     |              3000 |                70000 |
+|  2 |       6 |            -0.1 | severe weather     |              2550 |                68200 |
+|  3 |       7 |             1.2 | severe weather     |              1740 |               250000 |
+|  4 |      11 |            -1.4 | severe weather     |              1860 |                60000 |
+|  5 |       7 |            -0.9 | severe weather     |              2970 |                63000 |
+|  6 |       6 |             0.2 | severe weather     |              3960 |               300000 |
+|  7 |       3 |             0.6 | intentional attack |               155 |                 5941 |
+|  8 |       6 |            -0.2 | severe weather     |              3621 |               400000 |
+|  9 |       6 |            -0.2 | severe weather     |              7740 |               193000 |
 
 **Our prediction question**: Predict if a major power outage is caused by the severe weather.
 
