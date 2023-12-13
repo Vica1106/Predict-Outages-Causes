@@ -15,11 +15,6 @@ To make accurate predictions, we will utilize historical data on power outages t
 
 We plan to train a binery classifier for the prediction model. By training a classification model, we want to develop a prediction to identify whether a power outage is caused by the several weather based on the information we can get after a major power outage.
 
-**Step 0.1**: Only keep columns we want.
-**Step 0.2**: Data Cleaning
-1. Clean the missing data from column OUTAGE.DURATION and 'CUSTOMERS.AFFECTED' by drop the null values.
-2. Change data type of column 'OUTAGE.DURATION' to float.
-
 ## Framing the Problem
 Our dataset encompasses records of significant power outages observed across various states in the continental U.S. during January 2000–July 2016, comprising 1534 entries and 55 variables. To enhance the analytical focus on power outage research, a decision has been made to streamline the dataset by retaining only 6 pertinent columns. 
 
