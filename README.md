@@ -101,6 +101,7 @@ We try to tune the max_depth, min_samples_split, and criterion as our hyperparam
 Our F1-Score increases about 0.02 after we using the hyperparameter we find. so we will use this combination of hyperparameter to do the rest of the analysis.
 
 **Step 3.5**:Confusion matrix
+<iframe src="assets/confusion_matrix.html" width=800 height=600 frameBorder=0></iframe>
 
 In order to actually see whether our model can make a good prediction, we decide to make a confusion matrix to plot the matrix directly.
 
@@ -130,6 +131,7 @@ The question we are trying to answer is whether the outages happened when cold e
 
 #### Conclusion
 
+<iframe src="assets/his.html" width=800 height=600 frameBorder=0></iframe>
 - The p-value is around 0.29, it is greater than the significance level of 0.01. 
 - We fail to reject the null hypothesis. 
 - There is not enough evidence to conclude that the precision for Outages happened when cold episodes by season is higher than its precision for Outages happened when warm episodes by season.
